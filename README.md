@@ -1,0 +1,2 @@
+# MyJs
+JavaScript learning
