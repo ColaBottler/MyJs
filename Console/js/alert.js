@@ -1,5 +1,4 @@
-var j="再";
-var temp="";
+var j="再",temp="";
 alert("有本事你就点一下");
 function Taolu()
 {
