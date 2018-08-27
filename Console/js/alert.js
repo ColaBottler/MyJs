@@ -1,9 +1,12 @@
+var j="再";
+var temp="";
+alert("有本事你就点一下");
 function Taolu()
 {
-    alert("有本事你就点一下");
-    alert("有本事就再点一下");
+    for(var i=1;;i++)
+    {
+        temp+=j;
+        alert("有本事就"+temp+"点一下");
+    }
 }
-for(var i=0;;i++)
-{
-    Taolu();
-}
+Taolu();
