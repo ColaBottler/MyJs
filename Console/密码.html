@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <title>猜数字</title>
     <script>
-        function guess(temp)
-        {
-            var password = 233;
+        function guess(temp) {
+            var password = Math.floor(1000 * Math.random());
             for (var i = 0; ; i++) {
                 if (temp > password)
                     temp = prompt("太大了，输入一个更小的数");
                 else if (temp < password)
                     temp = prompt("太小了，输入一个更大的数");
                 else {
-                    alert("恭喜你答对了!\n可惜没有奖励，233");
+                    document.writeln("恭喜你答对了!\n可惜没有奖励");
                     break;
                 }
-
             }
         }
+
         temp = prompt("请输入一个三位数");
         guess(temp);
 
     </script>
 </head>
 <body>
-<img src="../images/可怜的君君.jpg" width="300" >
+<img src="../images/可怜的君君.jpg" width="300">
 </body>
 </html>
