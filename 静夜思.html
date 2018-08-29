@@ -5,28 +5,54 @@
     <title>MyJs</title>
     <meta charset=utf-8>
     <style type="text/css">
-    body
-    {
-        background-image:url(./images/静夜思.jpg);
-        background-size:100% 100%;
-        height:100%;
-    }
-    html
-    {
-        height:100%;
-    }
+        body {
+            background-image: url(./images/静夜思.jpg);
+            background-size: 100% 100%;
+            height: 100%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        #bgmButton {
+            height: 100px;
+            width: 100px;
+            background-image: url(images/播放.jpg);
+            position: absolute;
+            top: 0;
+
+        }
+
     </style>
 </head>
 
 <body>
-    <audio src="bgm/静夜思.mp3" controls="controls" autoplay="autoplay">
-    </audio>
-    <h1><p align="middle">静 夜 思</p></h1>
-    <b><p align="middle">床 前 明 月 光，</p>
+<audio id="bgm" src="bgm/静夜思.mp3" autoplay="autoplay">
+</audio>
+
+<h1><p align="middle">静 夜 思</p></h1>
+<b><p align="middle">床 前 明 月 光，</p>
     <p align="middle">疑 似 地 上 霜。</p>
     <p align="middle">举 头 望 明 月，</p>
     <p align="middle">低 头 思 故 乡。</p></b>
- 
-  
+
+<div id="bgmButton" onclick="control()">
+</div>
 </body>
+<script>
+    var bgm = document.getElementById("bgm");
+    var button = document.getElementById("bgmButton");
+
+    function control() {
+        if (!bgm.paused) {
+            bgm.pause();
+            button.style.backgroundImage = "url('images/暂停.gif')";
+        }
+        else {
+            bgm.play();
+            button.style.backgroundImage = "url('images/播放.jpg')";
+        }
+    }
+</script>
 </html>

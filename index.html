@@ -2,19 +2,53 @@
 <html>
 
 <head>
-  <title>MyJs</title>
-  <meta charset=utf-8>
-  <style type="text/css">
-    body{
-          background-image:url(./image/爱信不信.jpg);
-    }
-  </style>
+    <title>MyJs</title>
+    <meta charset=utf-8>
+    <style type="text/css">
+        body {
+            height: 100%;
+        }
+
+        html {
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-  <p>静夜思</p>
-  <img src="./images/可怜的君君.jpg" width="200" alt="可怜的君君">
-  
+<h1 id="h1"></h1>
+<button onclick="succession()">往后写</button>
 </body>
 
 </html>
+<script>
+    var j = 0;
+    var judge;
+    var h = document.getElementById("h1");
+    h.innerText = j;
+
+    function seven(j) {
+        if (j % 7 == 0)
+            return true;
+        else {
+            var temp = j;
+            while (temp > 0) {
+                if (temp % 10 == 7)
+                    return true;
+                temp = Math.floor(temp / 10);
+            }
+            return false;
+        }
+    }
+
+    function succession() {
+        j++;
+        judge = seven(j);
+        if (judge)
+            h.innerHTML = h.innerHTML + " 过";
+
+        else
+            h.innerHTML = h.innerHTML
+                + " " + j;
+    }
+</script>
