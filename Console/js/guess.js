@@ -36,7 +36,7 @@ function Guess() {
     else {
         str = "恭喜你猜对了!";
         bingo = 1;
-        document.write("<img src='../images/骰子/点数" + number + ".jpg'>");
+        document.write("<img src='../img/骰子/点数" + number + ".jpg'>");
     }
     document.getElementById("message").innerHTML = str;
 }
