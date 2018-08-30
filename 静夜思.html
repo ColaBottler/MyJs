@@ -6,7 +6,7 @@
     <meta charset=utf-8>
     <style type="text/css">
         body {
-            background-image: url(./images/静夜思.jpg);
+            background-image: url(./img/静夜思.jpg);
             background-size: 100% 100%;
             height: 100%;
         }
@@ -18,7 +18,7 @@
         #bgmButton {
             height: 100px;
             width: 100px;
-            background-image: url(images/播放.jpg);
+            background-image: url(img/播放.jpg);
             position: absolute;
             top: 0;
 
@@ -47,11 +47,11 @@
     function control() {
         if (!bgm.paused) {
             bgm.pause();
-            button.style.backgroundImage = "url('images/暂停.gif')";
+            button.style.backgroundImage = "url('img/暂停.gif')";
         }
         else {
             bgm.play();
-            button.style.backgroundImage = "url('images/播放.jpg')";
+            button.style.backgroundImage = "url('img/播放.jpg')";
         }
     }
 </script>
